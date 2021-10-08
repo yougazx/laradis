@@ -1,0 +1,44 @@
+@extends('layouts.metrica', [
+    'activePage' => '{{modelNameSingularLowerCase}}',
+    'activeModule' => '{{module}}',
+])
+
+@section('content')
+    <div class="container-fluid">
+        <!-- Page-Title -->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-title-box">
+                    <div class="float-right">
+                        <a href="{{ $createLink }}" class="btn btn-soft-primary waves-light waves-effect dropdown-toggle"><i class="fas fa-plus"></i> Tambah</a>
+                    </div>
+                    <h4 class="page-title">{{ $title }}: Semua Data</h4>
+                </div><!--end page-title-box-->
+            </div><!--end col-->
+        </div><!--end row-->
+        <!-- end page title end breadcrumb -->
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach(${{modelNamePluralCamelCase}} as ${{modelNamePluralCamelCase}})
+                                    <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                    </td>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div> <!-- end col -->
+        </div> <!-- end row -->
+    </div><!-- container -->
+@endsection
