@@ -70,7 +70,7 @@ class ProvinceController extends Controller
     {
         $province->update($request->all());
 
-        return redirect()->route('province.index')->with('success', 'Sukses mengedit data');
+        return redirect()->route('province.index')->with('success', 'Sukses mengubah data');
     }
 
     public function destroy(Province $province)

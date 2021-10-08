@@ -64,16 +64,16 @@ class GenerateCRUD extends Command
         $this->nameTitleCase = Str::title($slug);
 
         //generate the crud files
-        // $this->model();
-        // $this->migration();
-        // $this->factory();
-        // $this->seeder();
-        // $this->controller();
-        // $this->request();
+        $this->model();
+        $this->migration();
+        $this->factory();
+        $this->seeder();
+        $this->controller();
+        $this->request();
         $this->views();
-        // $this->route();
-        // $this->test();
-        // $this->permissions();
+        $this->route();
+        $this->test();
+        $this->permissions();
 
         //cleaning up
         system('composer dump-autoload');

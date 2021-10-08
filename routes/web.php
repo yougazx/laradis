@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::resource('province', 'ProvinceController');
+Route::resource('city', 'CityController');
