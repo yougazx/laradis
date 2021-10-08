@@ -4,7 +4,7 @@
 ])
 
 @section('content')
-    <div class="container mt-5">
+    <div class="container mt-3">
         <!-- Page-Title -->
         <div class="row mb-2">
             <div class="col-sm-12">

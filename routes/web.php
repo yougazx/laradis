@@ -19,3 +19,4 @@ Route::get('/', function () {
 
 Route::resource('province', 'ProvinceController');
 Route::resource('city', 'CityController');
+Route::get('report', 'ReportController@index')->name('report.index');
